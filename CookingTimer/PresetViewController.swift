@@ -47,17 +47,16 @@ class PresetViewController: UIViewController {
     
         
         func alert(title:String, message:String) {
-                alertController = UIAlertController(title: title,
-                                           message: message,
-                                           preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK",
-                                               style: .default,
-                                               handler: nil))
-                present(alertController, animated: true)
-            }
+            alertController = UIAlertController(title: title,message: message,preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK",style: .default,handler: nil))
+            present(alertController, animated: true)
+        }
+        
+        self.navigationController?.popToRootViewController(animated: true)
         
         alert(title: "保存されました。",
                       message: "タイマーの情報が保存されました。")
+        
         
     }
 }
