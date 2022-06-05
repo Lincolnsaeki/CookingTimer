@@ -8,6 +8,9 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    @IBOutlet var TimerLabelMinutes: UILabel!
+    @IBOutlet var TimerLabelSeconds: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

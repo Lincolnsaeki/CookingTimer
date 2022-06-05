@@ -11,12 +11,10 @@ class WattViewController: UIViewController {
     
     @IBOutlet var MinutesTextField: UITextField!
     @IBOutlet var SecondsTextField: UITextField!
-    @IBOutlet var TimernameTextField: UITextField!
     @IBOutlet var WattTextField: UITextField!
     @IBOutlet var ChangeWattTextField: UITextField!
     @IBOutlet var TimerLabelMinutes: UILabel!
     @IBOutlet var TimerLabelSeconds: UILabel!
-    @IBOutlet var nameLabel: UILabel!
    
     
     override func viewDidLoad() {

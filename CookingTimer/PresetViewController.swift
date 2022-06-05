@@ -44,7 +44,7 @@ class PresetViewController: UIViewController {
     
     @IBAction func Savebotton(){
         
-        
+    
         
         func alert(title:String, message:String) {
                 alertController = UIAlertController(title: title,
@@ -55,6 +55,7 @@ class PresetViewController: UIViewController {
                                                handler: nil))
                 present(alertController, animated: true)
             }
+        
         alert(title: "保存されました。",
                       message: "タイマーの情報が保存されました。")
         
