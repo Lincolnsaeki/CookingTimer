@@ -8,7 +8,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,9 +32,6 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! MainTableViewCell
-        
-        
-        let MInt = UserDefaults.standard.integer(forKey: "minutes")
         
         return cell
     }
