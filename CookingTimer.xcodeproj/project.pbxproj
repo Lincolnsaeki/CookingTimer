@@ -72,7 +72,6 @@
 			children = (
 				E9C9813D2839EA1C00E2CA36 /* AppDelegate.swift */,
 				E9C9813F2839EA1C00E2CA36 /* SceneDelegate.swift */,
-				E9C981412839EA1C00E2CA36 /* ViewController.swift */,
 				E918E501283C04FD005D3210 /* BoiledEggViewController.swift */,
 				E93A6CA228436508006BEA8F /* PastaViewController.swift */,
 				E93A6CA42843B986006BEA8F /* WattViewController.swift */,
@@ -81,8 +80,9 @@
 				E99E3785284C972A00B8F96F /* MainTableViewCell.swift */,
 				E9C981432839EA1C00E2CA36 /* Main.storyboard */,
 				E99E3786284C972A00B8F96F /* MainTableViewCell.xib */,
-				E9C981462839EA1D00E2CA36 /* Assets.xcassets */,
 				E9C981482839EA1D00E2CA36 /* LaunchScreen.storyboard */,
+				E9C981462839EA1D00E2CA36 /* Assets.xcassets */,
+				E9C981412839EA1C00E2CA36 /* ViewController.swift */,
 				E9C9814B2839EA1D00E2CA36 /* Info.plist */,
 			);
 			path = CookingTimer;
