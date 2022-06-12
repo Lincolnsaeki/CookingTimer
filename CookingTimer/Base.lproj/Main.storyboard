@@ -284,7 +284,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="reset:" destination="BxG-IO-Vdv" eventType="touchUpInside" id="A2D-33-J9P"/>
+                                    <action selector="Savebotton" destination="BxG-IO-Vdv" eventType="touchUpInside" id="lSo-2R-k3W"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTV-MO-PZ9">
@@ -302,7 +302,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startCountButton:" destination="BxG-IO-Vdv" eventType="touchUpInside" id="4Qf-bm-kAM"/>
+                                    <action selector="OKbotton" destination="BxG-IO-Vdv" eventType="touchUpInside" id="B7J-JC-U0f"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uom-KO-W4c">
@@ -315,9 +315,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q2W-mA-UU5"/>
                     <connections>
-                        <outlet property="pickerLabel" destination="DTV-MO-PZ9" id="QXk-Bs-VLP"/>
-                        <outlet property="pickerView" destination="uom-KO-W4c" id="9tm-vM-e1i"/>
-                        <outlet property="start" destination="hpm-B8-YrP" id="Ovq-Tv-qnY"/>
+                        <outlet property="TimerPicker" destination="uom-KO-W4c" id="nG8-tx-ehM"/>
+                        <outlet property="TimernameTextField" destination="Vvl-9O-1ni" id="l1m-l2-Lcp"/>
+                        <outlet property="nameLabel" destination="DTV-MO-PZ9" id="SYR-az-lvA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kE-kN-rUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
