@@ -42,7 +42,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="START"/>
                         <connections>
-                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SsS-Kk-IhG"/>
+                            <action selector="startButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3SI-V7-nKr"/>
                         </connections>
                     </button>
                 </subviews>
@@ -51,8 +51,8 @@
             <connections>
                 <outlet property="Starttimer" destination="LVk-hM-B7I" id="4j5-2z-D8x"/>
                 <outlet property="Stoptimer" destination="Axb-py-iBQ" id="viF-h1-ju3"/>
-                <outlet property="TimerNameLabel" destination="8N4-yt-zr0" id="Or7-g5-ZUA"/>
                 <outlet property="timerLabel" destination="AM7-kG-Fjy" id="Pnh-zy-Zdb"/>
+                <outlet property="timerNameLabel" destination="8N4-yt-zr0" id="Or7-g5-ZUA"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="67.96875"/>
         </tableViewCell>

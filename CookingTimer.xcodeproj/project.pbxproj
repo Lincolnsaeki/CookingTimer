@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAB123B32857606400CCB373 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB123B22857606400CCB373 /* TimerModel.swift */; };
+		CAB123B62857611500CCB373 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CAB123B52857611500CCB373 /* Realm */; };
+		CAB123B82857611500CCB373 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CAB123B72857611500CCB373 /* RealmSwift */; };
 		E918E502283C04FD005D3210 /* BoiledEggViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918E501283C04FD005D3210 /* BoiledEggViewController.swift */; };
 		E93A6CA328436508006BEA8F /* PastaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6CA228436508006BEA8F /* PastaViewController.swift */; };
 		E93A6CA52843B986006BEA8F /* WattViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6CA42843B986006BEA8F /* WattViewController.swift */; };
@@ -23,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CAB123B22857606400CCB373 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		E918E501283C04FD005D3210 /* BoiledEggViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoiledEggViewController.swift; sourceTree = "<group>"; };
 		E93A6CA228436508006BEA8F /* PastaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaViewController.swift; sourceTree = "<group>"; };
 		E93A6CA42843B986006BEA8F /* WattViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WattViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB123B82857611500CCB373 /* RealmSwift in Frameworks */,
+				CAB123B62857611500CCB373 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +78,7 @@
 			children = (
 				E9C9813D2839EA1C00E2CA36 /* AppDelegate.swift */,
 				E9C9813F2839EA1C00E2CA36 /* SceneDelegate.swift */,
+				CAB123B22857606400CCB373 /* TimerModel.swift */,
 				E918E501283C04FD005D3210 /* BoiledEggViewController.swift */,
 				E93A6CA228436508006BEA8F /* PastaViewController.swift */,
 				E93A6CA42843B986006BEA8F /* WattViewController.swift */,
@@ -104,6 +111,10 @@
 			dependencies = (
 			);
 			name = CookingTimer;
+			packageProductDependencies = (
+				CAB123B52857611500CCB373 /* Realm */,
+				CAB123B72857611500CCB373 /* RealmSwift */,
+			);
 			productName = CookingTimer;
 			productReference = E9C9813A2839EA1C00E2CA36 /* CookingTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +145,7 @@
 			mainGroup = E9C981312839EA1C00E2CA36;
 			packageReferences = (
 				E918E500283C02F9005D3210 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = E9C9813B2839EA1C00E2CA36 /* Products */;
 			projectDirPath = "";
@@ -166,6 +178,7 @@
 				E93A6CA328436508006BEA8F /* PastaViewController.swift in Sources */,
 				E99E3787284C972A00B8F96F /* MainTableViewCell.swift in Sources */,
 				E9C981422839EA1C00E2CA36 /* ViewController.swift in Sources */,
+				CAB123B32857606400CCB373 /* TimerModel.swift in Sources */,
 				E93A6CA72843BC8A006BEA8F /* PresetViewController.swift in Sources */,
 				E93A6CA928467EC7006BEA8F /* TableViewController.swift in Sources */,
 				E918E502283C04FD005D3210 /* BoiledEggViewController.swift in Sources */,
@@ -391,6 +404,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E918E500283C02F9005D3210 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -400,6 +421,19 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CAB123B52857611500CCB373 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		CAB123B72857611500CCB373 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9C981322839EA1C00E2CA36 /* Project object */;
 }

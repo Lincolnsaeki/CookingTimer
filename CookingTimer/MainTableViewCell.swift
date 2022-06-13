@@ -9,45 +9,48 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
     
-    var time = 5
-    var timer = Timer()
-    
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var TimerNameLabel: UILabel!
+    @IBOutlet weak var timerNameLabel: UILabel!
     @IBOutlet weak var Starttimer: UIButton!
     @IBOutlet weak var Stoptimer: UIButton!
-    var alertController: UIAlertController!
+    
+    var time = 5
+    var timer = Timer()
+    var delegate: UIViewController? //必要
+    var alert:UIAlertController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         timerLabel.text = String(time)
         Starttimer.layer.cornerRadius = 10
     }
     
-    func alert(title:String, message:String) {
-        alertController = UIAlertController(title: title,message: message,preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK",style: .default,handler: nil))
-    }
     // ボタンが押された時の処理
-    @IBAction func buttonAction(){
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+    @IBAction func startButton(){
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [self] (timer) in
             self.time -= 1
             self.timerLabel.text = String(self.time)
             
             if self.time == 0 {
-                self.alert(title: "タイマーストップ",
-                           message: "時間です")
+                timer.invalidate()
+                self.showAlert()
             }
         })
     }
     
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        timer.invalidate()
+    func showAlert(){
+        alert = UIAlertController(title:timerNameLabel.text , message: "タイマーが終了しました", preferredStyle: UIAlertController.Style.alert)
+        
+        let OKAction:UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
+            (action:UIAlertAction!) -> Void in
+        })
+        
+        let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler:{
+            action in
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(OKAction)
+        delegate!.present(alert, animated: true, completion: nil) //必要
     }
-    
 }
-
-
-
-
