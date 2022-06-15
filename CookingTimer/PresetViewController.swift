@@ -15,8 +15,11 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     let dataList = [[Int](0...24), [Int](0...60), [Int](0...60)]
     let realm = try! Realm()
+    let hour: Int = dataList[0][pickerView.selectedRow(inComponent: 0)] * 60 * 60!
+    let minute: Int = dataList[0][pickerView.selectedRow(inComponent: 1)] * 60!
+    let second: Int = dataList[0][pickerView.selectedRow(inComponent: 2)]!
     var timerNameTextFieldString = ""
-    var count:Int = 0
+    var count = self().hour + self().minute + self().second
     
     
 
@@ -30,9 +33,6 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBAction func saveButton(){
         //PickerViewの値取り出し
         
-        count = dataList[0][pickerView.selectedRow(inComponent: 0)] * 60 * 60
-            +  dataList[0][pickerView.selectedRow(inComponent: 1)] * 60
-            +  dataList[0][pickerView.selectedRow(inComponent: 2)]
         
         print(count)
         
@@ -46,7 +46,7 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         //値をrealmに保存するコードを書く
         let timer = TimerModel()
         timer.timerName = timerNameTextFieldString
-        timer.seconds = 30
+        timer.seconds = count
         
         try! realm.write({
             realm.add(timer) // レコードを追加
