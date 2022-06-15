@@ -270,19 +270,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="TimerName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvl-9O-1ni">
-                                <rect key="frame" x="72" y="488" width="271" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="TimerName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvl-9O-1ni">
+                                <rect key="frame" x="72" y="441" width="271" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uom-KO-W4c">
-                                <rect key="frame" x="0.0" y="148" width="414" height="263"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uom-KO-W4c">
+                                <rect key="frame" x="0.0" y="148" width="414" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-dV-0f7">
-                                <rect key="frame" x="82" y="634" width="251" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-dV-0f7">
+                                <rect key="frame" x="82" y="634" width="251" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SAVE">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
@@ -294,6 +291,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zQL-gl-eOF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vvl-9O-1ni" firstAttribute="top" secondItem="uom-KO-W4c" secondAttribute="bottom" constant="77" id="60p-U2-OoW"/>
+                            <constraint firstItem="Vvl-9O-1ni" firstAttribute="top" secondItem="uom-KO-W4c" secondAttribute="bottom" constant="77" id="7XM-l2-qpJ"/>
+                            <constraint firstItem="0Gk-dV-0f7" firstAttribute="top" secondItem="Vvl-9O-1ni" secondAttribute="bottom" constant="135.5" id="DiT-oP-Zn8"/>
+                            <constraint firstItem="uom-KO-W4c" firstAttribute="trailing" secondItem="zQL-gl-eOF" secondAttribute="trailing" id="H4Z-9A-Ycj"/>
+                            <constraint firstItem="uom-KO-W4c" firstAttribute="leading" secondItem="zQL-gl-eOF" secondAttribute="leading" id="KoY-Lp-YlI"/>
+                            <constraint firstItem="0Gk-dV-0f7" firstAttribute="leading" secondItem="zQL-gl-eOF" secondAttribute="leading" constant="82" id="MJm-ig-Gn7"/>
+                            <constraint firstItem="Vvl-9O-1ni" firstAttribute="leading" secondItem="zQL-gl-eOF" secondAttribute="leading" constant="72" id="Rqn-Dl-KJ7"/>
+                            <constraint firstItem="zQL-gl-eOF" firstAttribute="bottom" secondItem="0Gk-dV-0f7" secondAttribute="bottom" constant="185" id="WCJ-t8-jw6"/>
+                            <constraint firstItem="zQL-gl-eOF" firstAttribute="trailing" secondItem="0Gk-dV-0f7" secondAttribute="trailing" constant="81" id="fVO-m5-dz1"/>
+                            <constraint firstItem="uom-KO-W4c" firstAttribute="top" secondItem="zQL-gl-eOF" secondAttribute="top" constant="60" id="fuV-Ud-hQS"/>
+                            <constraint firstItem="zQL-gl-eOF" firstAttribute="trailing" secondItem="Vvl-9O-1ni" secondAttribute="trailing" constant="71" id="g5R-Hb-bAP"/>
+                            <constraint firstItem="0Gk-dV-0f7" firstAttribute="top" secondItem="Vvl-9O-1ni" secondAttribute="bottom" constant="135.5" id="kpf-E8-xZY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q2W-mA-UU5"/>
                     <connections>

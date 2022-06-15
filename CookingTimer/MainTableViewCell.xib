@@ -16,32 +16,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TimerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-yt-zr0">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TimerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-yt-zr0">
                         <rect key="frame" x="25" y="75" width="129" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.47058823529999999" green="0.46999999879999999" blue="0.46999999879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM7-kG-Fjy">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM7-kG-Fjy">
                         <rect key="frame" x="16" y="16" width="129" height="62"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="48"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-py-iBQ">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-py-iBQ">
                         <rect key="frame" x="173" y="36" width="61" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="STOP"/>
                         <connections>
                             <action selector="stopButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ewx-N3-OgQ"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-hM-B7I">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-hM-B7I">
                         <rect key="frame" x="236" y="36" width="68" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="START"/>
                         <connections>
@@ -49,6 +45,18 @@
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="8N4-yt-zr0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="3oK-Qj-wBr"/>
+                    <constraint firstItem="LVk-hM-B7I" firstAttribute="leading" secondItem="Axb-py-iBQ" secondAttribute="trailing" constant="2" id="Rhq-WB-Gdw"/>
+                    <constraint firstItem="Axb-py-iBQ" firstAttribute="leading" secondItem="AM7-kG-Fjy" secondAttribute="trailing" constant="28" id="Ssu-fr-Hac"/>
+                    <constraint firstAttribute="bottom" secondItem="AM7-kG-Fjy" secondAttribute="bottom" constant="25" id="TL9-T7-Lp9"/>
+                    <constraint firstItem="AM7-kG-Fjy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Uvx-pK-7k3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8N4-yt-zr0" secondAttribute="trailing" constant="150" id="dI1-n1-vND"/>
+                    <constraint firstItem="AM7-kG-Fjy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nWz-5a-7eg"/>
+                    <constraint firstAttribute="trailing" secondItem="LVk-hM-B7I" secondAttribute="trailing" constant="16" id="pac-h7-MxD"/>
+                    <constraint firstItem="Axb-py-iBQ" firstAttribute="leading" secondItem="AM7-kG-Fjy" secondAttribute="trailing" constant="28" id="sBZ-fW-eeC"/>
+                    <constraint firstItem="LVk-hM-B7I" firstAttribute="leading" secondItem="Axb-py-iBQ" secondAttribute="trailing" constant="2" id="wTV-zq-ooU"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

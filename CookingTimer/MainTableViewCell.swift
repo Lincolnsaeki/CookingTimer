@@ -14,16 +14,26 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var timerNameLabel: UILabel!
     @IBOutlet weak var Starttimer: UIButton!
     @IBOutlet weak var Stoptimer: UIButton!
+
     
-    var time = 30
+    var time = 0
     var timer = Timer()
     var delegate: UIViewController? //必要
     var alert:UIAlertController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        timerLabel.text = String(time)
-        Starttimer.layer.cornerRadius = 10
+        
+        let realm = try! Realm()
+               let timer = realm.objects(TimerModel.self)
+               
+               for objData in timer{
+                   timerLabel.text = String(time)
+                   Starttimer.layer.cornerRadius = 10
+               }
+        
+        
+        
     }
     
     // ボタンが押された時の処理

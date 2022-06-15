@@ -13,13 +13,13 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBOutlet var timerPicker: UIPickerView!
     @IBOutlet var timerNameTextField: UITextField!
     
-    let dataList = [[Int](0...24), [Int](0...60), [Int](0...60)]
+    let dataList = [[Int](0...6), [Int](0...59), [Int](0...59)]
     let realm = try! Realm()
-    let hour: Int = dataList[0][pickerView.selectedRow(inComponent: 0)] * 60 * 60!
-    let minute: Int = dataList[0][pickerView.selectedRow(inComponent: 1)] * 60!
-    let second: Int = dataList[0][pickerView.selectedRow(inComponent: 2)]!
     var timerNameTextFieldString = ""
-    var count = self().hour + self().minute + self().second
+    var hour: Int!
+    var minute: Int!
+    var second: Int!
+    var count: Int!
     
     
 
@@ -33,11 +33,13 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBAction func saveButton(){
         //PickerViewの値取り出し
         
+        hour = dataList[0][timerPicker.selectedRow(inComponent: 0)] * 60 * 60
+        minute = dataList[0][timerPicker.selectedRow(inComponent: 1)] * 60
+        second = dataList[0][timerPicker.selectedRow(inComponent: 2)]
+        count = hour + minute + second
         
         print(count)
         
-        //PickerViewの値を秒にする
-        print()
 
         //TextFieldの値を取り出す
         timerNameTextFieldString = timerNameTextField.text!
@@ -52,7 +54,7 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
             realm.add(timer) // レコードを追加
         })
 
-//        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func timerPickerSetup(){
