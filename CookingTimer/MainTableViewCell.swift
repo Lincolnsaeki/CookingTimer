@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainTableViewCell: UITableViewCell {
     
@@ -14,7 +15,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var Starttimer: UIButton!
     @IBOutlet weak var Stoptimer: UIButton!
     
-    var time = 5
+    var time = 30
     var timer = Timer()
     var delegate: UIViewController? //必要
     var alert:UIAlertController!
@@ -36,6 +37,10 @@ class MainTableViewCell: UITableViewCell {
                 self.showAlert()
             }
         })
+    }
+    @IBAction func stopButton(){
+        timer.invalidate()
+        
     }
     
     func showAlert(){

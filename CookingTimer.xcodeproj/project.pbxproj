@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CAB123B32857606400CCB373 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB123B22857606400CCB373 /* TimerModel.swift */; };
-		CAB123B62857611500CCB373 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CAB123B52857611500CCB373 /* Realm */; };
-		CAB123B82857611500CCB373 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CAB123B72857611500CCB373 /* RealmSwift */; };
 		E918E502283C04FD005D3210 /* BoiledEggViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918E501283C04FD005D3210 /* BoiledEggViewController.swift */; };
 		E93A6CA328436508006BEA8F /* PastaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6CA228436508006BEA8F /* PastaViewController.swift */; };
 		E93A6CA52843B986006BEA8F /* WattViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6CA42843B986006BEA8F /* WattViewController.swift */; };
 		E93A6CA72843BC8A006BEA8F /* PresetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6CA62843BC8A006BEA8F /* PresetViewController.swift */; };
 		E93A6CA928467EC7006BEA8F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A6CA828467EC7006BEA8F /* TableViewController.swift */; };
+		E97EA12928576A9400AAB75B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E97EA12828576A9400AAB75B /* Realm */; };
+		E97EA12B28576A9400AAB75B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E97EA12A28576A9400AAB75B /* RealmSwift */; };
 		E99E3787284C972A00B8F96F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E3785284C972A00B8F96F /* MainTableViewCell.swift */; };
 		E99E3788284C972A00B8F96F /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99E3786284C972A00B8F96F /* MainTableViewCell.xib */; };
 		E9C9813E2839EA1C00E2CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9813D2839EA1C00E2CA36 /* AppDelegate.swift */; };
@@ -49,8 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB123B82857611500CCB373 /* RealmSwift in Frameworks */,
-				CAB123B62857611500CCB373 /* Realm in Frameworks */,
+				E97EA12B28576A9400AAB75B /* RealmSwift in Frameworks */,
+				E97EA12928576A9400AAB75B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +112,8 @@
 			);
 			name = CookingTimer;
 			packageProductDependencies = (
-				CAB123B52857611500CCB373 /* Realm */,
-				CAB123B72857611500CCB373 /* RealmSwift */,
+				E97EA12828576A9400AAB75B /* Realm */,
+				E97EA12A28576A9400AAB75B /* RealmSwift */,
 			);
 			productName = CookingTimer;
 			productReference = E9C9813A2839EA1C00E2CA36 /* CookingTimer.app */;
@@ -144,8 +144,7 @@
 			);
 			mainGroup = E9C981312839EA1C00E2CA36;
 			packageReferences = (
-				E918E500283C02F9005D3210 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				E97EA12728576A9400AAB75B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = E9C9813B2839EA1C00E2CA36 /* Products */;
 			projectDirPath = "";
@@ -404,33 +403,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		E97EA12728576A9400AAB75B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
+			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		E918E500283C02F9005D3210 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CAB123B52857611500CCB373 /* Realm */ = {
+		E97EA12828576A9400AAB75B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = E97EA12728576A9400AAB75B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		CAB123B72857611500CCB373 /* RealmSwift */ = {
+		E97EA12A28576A9400AAB75B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CAB123B42857611500CCB373 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = E97EA12728576A9400AAB75B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

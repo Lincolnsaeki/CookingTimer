@@ -35,6 +35,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="STOP"/>
+                        <connections>
+                            <action selector="stopButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ewx-N3-OgQ"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-hM-B7I">
                         <rect key="frame" x="236" y="36" width="68" height="31"/>

@@ -159,14 +159,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s1-0d-1XV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="78"/>
+            <point key="canvasLocation" x="1809" y="-269"/>
         </scene>
         <!--Pasta View Controller-->
         <scene sceneID="usB-3Q-WhN">
             <objects>
                 <viewController id="meW-G3-QZ8" customClass="PastaViewController" customModule="CookingTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yX7-Lm-1Eq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpI-hJ-P2j">
@@ -267,7 +267,7 @@
             <objects>
                 <viewController id="BxG-IO-Vdv" customClass="PresetViewController" customModule="CookingTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7O-91-f1K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="タイマー名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvl-9O-1ni">
@@ -303,14 +303,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kE-kN-rUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782.608695652174" y="-167.41071428571428"/>
+            <point key="canvasLocation" x="890" y="78"/>
         </scene>
         <!--Boiled Egg View Controller-->
         <scene sceneID="YGL-fM-YhY">
             <objects>
                 <viewController id="nra-Sd-TK1" customClass="BoiledEggViewController" customModule="CookingTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Pu-yL-bV8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-jZ-YXq">
@@ -391,7 +391,7 @@
             <objects>
                 <viewController id="kTv-wI-Loo" customClass="WattViewController" customModule="CookingTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e6d-Qh-wX5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgL-1X-SNg">
@@ -492,7 +492,7 @@
                     <navigationItem key="navigationItem" id="L5P-2X-lI9">
                         <barButtonItem key="rightBarButtonItem" image="plus.square.dashed" catalog="system" id="LWh-pz-wLK">
                             <connections>
-                                <segue destination="bjv-I5-i1J" kind="show" id="1Np-QE-Du5"/>
+                                <segue destination="BxG-IO-Vdv" kind="show" id="kj1-HW-Myf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -520,6 +520,9 @@
             <point key="canvasLocation" x="-946.37681159420299" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IyT-k3-yeM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="plus.square.dashed" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
