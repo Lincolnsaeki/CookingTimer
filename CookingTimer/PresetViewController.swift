@@ -31,8 +31,8 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         //PickerViewの値取り出し
         
         count = dataList[0][pickerView.selectedRow(inComponent: 0)] * 60 * 60
-                    +  dataList[0][pickerView.selectedRow(inComponent: 1)] * 60
-                    +  dataList[0][pickerView.selectedRow(inComponent: 2)]
+            +  dataList[0][pickerView.selectedRow(inComponent: 1)] * 60
+            +  dataList[0][pickerView.selectedRow(inComponent: 2)]
         
         print(count)
         
