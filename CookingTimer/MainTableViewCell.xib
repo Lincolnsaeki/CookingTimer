@@ -9,57 +9,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="103" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="CookingTimer" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="CookingTimer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TimerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-yt-zr0">
-                        <rect key="frame" x="25" y="75" width="129" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.47058823529999999" green="0.46999999879999999" blue="0.46999999879999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-py-iBQ">
-                        <rect key="frame" x="173" y="36" width="61" height="31"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="STOP"/>
-                        <connections>
-                            <action selector="stopButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ewx-N3-OgQ"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-hM-B7I">
-                        <rect key="frame" x="236" y="36" width="68" height="31"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="START"/>
-                        <connections>
-                            <action selector="startButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3SI-V7-nKr"/>
-                        </connections>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM7-kG-Fjy">
-                        <rect key="frame" x="49" y="11" width="30" height="62"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KkJ-ln-8Lj">
+                        <rect key="frame" x="20" y="14.5" width="280" height="74.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JWF-k2-ldT">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="74.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM7-kG-Fjy">
+                                        <rect key="frame" x="23" y="0.0" width="29.5" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-yt-zr0">
+                                        <rect key="frame" x="0.0" y="57.5" width="75" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.47058823529999999" green="0.46999999879999999" blue="0.46999999879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZFN-xq-71e">
+                                <rect key="frame" x="143" y="21.5" width="137" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-py-iBQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="STOP"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-hM-B7I">
+                                        <rect key="frame" x="69.5" y="0.0" width="67.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Axb-py-iBQ" firstAttribute="leading" secondItem="AM7-kG-Fjy" secondAttribute="trailing" constant="94" id="1to-Ll-Xsl"/>
-                    <constraint firstItem="8N4-yt-zr0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="3oK-Qj-wBr"/>
-                    <constraint firstItem="AM7-kG-Fjy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="49" id="8Oj-jo-NU4"/>
-                    <constraint firstItem="8N4-yt-zr0" firstAttribute="top" secondItem="AM7-kG-Fjy" secondAttribute="bottom" constant="2" id="9Cz-Tk-qA3"/>
-                    <constraint firstItem="LVk-hM-B7I" firstAttribute="leading" secondItem="Axb-py-iBQ" secondAttribute="trailing" constant="2" id="Rhq-WB-Gdw"/>
-                    <constraint firstAttribute="bottom" secondItem="LVk-hM-B7I" secondAttribute="bottom" constant="36" id="UbJ-0o-r8f"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="8N4-yt-zr0" secondAttribute="trailing" constant="150" id="dI1-n1-vND"/>
-                    <constraint firstItem="Axb-py-iBQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="eZ1-MR-O97"/>
-                    <constraint firstItem="LVk-hM-B7I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="ey7-ig-h23"/>
-                    <constraint firstAttribute="bottom" secondItem="Axb-py-iBQ" secondAttribute="bottom" constant="36" id="i1W-9A-gmZ"/>
-                    <constraint firstItem="8N4-yt-zr0" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="n0p-7w-Sdc"/>
-                    <constraint firstAttribute="trailing" secondItem="LVk-hM-B7I" secondAttribute="trailing" constant="16" id="pac-h7-MxD"/>
-                    <constraint firstItem="LVk-hM-B7I" firstAttribute="leading" secondItem="Axb-py-iBQ" secondAttribute="trailing" constant="2" id="wTV-zq-ooU"/>
-                    <constraint firstItem="AM7-kG-Fjy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="ykW-ki-8Nv"/>
+                    <constraint firstItem="KkJ-ln-8Lj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0WW-gE-Tat"/>
+                    <constraint firstAttribute="trailing" secondItem="KkJ-ln-8Lj" secondAttribute="trailing" constant="20" id="l5l-jI-Rhi"/>
+                    <constraint firstItem="KkJ-ln-8Lj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xVI-Ma-1Aw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -69,7 +67,7 @@
                 <outlet property="timerLabel" destination="AM7-kG-Fjy" id="Pnh-zy-Zdb"/>
                 <outlet property="timerNameLabel" destination="8N4-yt-zr0" id="Or7-g5-ZUA"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="67.96875"/>
+            <point key="canvasLocation" x="144.92753623188406" y="52.566964285714285"/>
         </tableViewCell>
     </objects>
 </document>
