@@ -13,7 +13,7 @@ class PresetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBOutlet var timerPicker: UIPickerView!
     @IBOutlet var timerNameTextField: UITextField!
     
-    let dataList = [[Int](0...6), [Int](0...59), [Int](0...59)]
+    let dataList = [[Int](0...6), [Int](0...60), [Int](0...60)]
     let realm = try! Realm()
     var timerNameTextFieldString = ""
     var hour: Int!

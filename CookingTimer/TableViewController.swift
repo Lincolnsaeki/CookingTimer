@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TableViewController: UITableViewController {
+    
+    let realm = try! Realm()
+    var timer = [TimerModel]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +20,16 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
+    
+    func getTimerData() {
+            timer = Array(realm.objects(TimerModel.self)).reversed()
+        // Realm DBから保存されてるツイートを全取得
+            tableView.reloadData() // テーブルビューをリロード
+        }
 
     //初期のcellの数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        timer.count
     }
     //cellのサイズ
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -31,4 +41,5 @@ class TableViewController: UITableViewController {
         cell.delegate = self
         return cell
     }
+    
 }
