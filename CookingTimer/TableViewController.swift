@@ -12,6 +12,8 @@ class TableViewController: UITableViewController {
     
     let realm = try! Realm()
     var timer = [TimerModel]()
+    var time = [String]()
+    var time:[String] = [timer[indexPath.row].seconds]
     var delegate: UIViewController?
     var alert:UIAlertController!
 
@@ -50,7 +52,7 @@ class TableViewController: UITableViewController {
 
         return cell
     }
-    //ボタンが押されたら
+    //startボタンが押されたら
     @objc func startButton(_ sender: UIButton) {
         let serected = timer[sender.tag]
            print(serected)
@@ -66,10 +68,11 @@ class TableViewController: UITableViewController {
         })
         
         }
+    //stopボタンが押されたら
     @objc func stopButton(_ sender: UIButton){
         timer.invalidate()
     }
-    
+    //アラートの設定
     func showAlert(){
         alert = UIAlertController(title: timerNameLabel.text, message: "タイマーが終了しました", preferredStyle: UIAlertController.Style.alert)
         
